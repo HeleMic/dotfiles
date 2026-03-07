@@ -1,0 +1,72 @@
+function welcome_banner() {
+	local WIDTH=$(tput cols)
+	figlet -w $WIDTH "Ciao  HeleMic  !" | lolcat
+}
+
+function dev_banner() {
+    # Capture terminal width
+    local WIDTH=$(tput cols)
+
+    # Helper: align label and value
+    function print_label_val() {
+        local label="$1"
+        local value="$2"
+        printf "%-15s : %s" "$label" "$value"
+    }
+
+    # Helper: print a separator line
+    function separator() {
+        printf "%*s\n" $((WIDTH-10)) "" | tr ' ' '─' | lolcat
+    }
+
+    # Capture ASCII title
+    local title_lines
+    title_lines=$(figlet -w $((WIDTH)) "Ciao  HeleMic  !")
+
+    # Collect general info
+    local info_lines=()
+    info_lines+=("📅 $(print_label_val "Date" "$(date '+%Y-%m-%d %H:%M:%S')")")
+    info_lines+=("💻 $(print_label_val "Host" "$(hostname)")")
+    info_lines+=("👤 $(print_label_val "User" "$USER")")
+    info_lines+=("📂 $(print_label_val "Dir" "$PWD")")
+    info_lines+=("🌐 $(print_label_val "IP" "$(ipconfig getifaddr en0 2>/dev/null || echo 'N/A')")")
+
+    # Collect software versions (only if installed)
+    local software_lines=()
+    command -v brew >/dev/null && software_lines+=("🍺 $(print_label_val "Homebrew" "$(brew --version | head -n1)")")
+    command -v python3 >/dev/null && software_lines+=("🐍 $(print_label_val "Python" "$(python3 --version)")")
+    command -v node >/dev/null && software_lines+=("🟢 $(print_label_val "Node" "$(node -v)")")
+    command -v npm >/dev/null && software_lines+=("📦 $(print_label_val "npm" "$(npm -v)")")
+    command -v php >/dev/null && software_lines+=("🐘 $(print_label_val "PHP" "$(php -v | head -n1)")")
+    command -v git >/dev/null && software_lines+=("🔀 $(print_label_val "Git" "$(git --version)")")
+    command -v docker >/dev/null && software_lines+=("🐳 $(print_label_val "Docker" "$(docker --version | awk '{print $3}' | sed 's/,//')")")
+
+    # Git branch if in a repository
+    if git rev-parse --git-dir >/dev/null 2>&1; then
+        software_lines+=("🌿 $(print_label_val "Git Branch" "$(git branch --show-current)")")
+    fi
+
+    # Print title ASCII colorized
+    echo "$title_lines" | lolcat
+
+    # Separator
+    separator
+
+    # Print general info colorized
+    for line in "${info_lines[@]}"; do
+        sleep 0.05
+        echo "$line"
+    done
+
+    # Separator between info and software
+    separator
+
+    # Print software info colorized
+    for line in "${software_lines[@]}"; do
+        sleep 0.05
+        echo "$line"
+    done
+
+    # Empty line at the end
+    echo ""
+}

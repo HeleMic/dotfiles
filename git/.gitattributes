@@ -1,0 +1,53 @@
+# --------------------------------------------------
+# Normalize text files
+# --------------------------------------------------
+* text=auto eol=lf
+
+# Explicit text files
+*.php         text diff=php
+*.js          text diff=javascript
+*.ts          text diff=javascript
+*.tsx         text diff=javascript
+*.jsx         text diff=javascript
+*.json        text
+*.yml         text
+*.yaml        text
+*.md          text
+*.css         text
+*.scss        text
+*.html        text
+*.sh          text eol=lf
+*.env         text eol=lf
+*.example     text eol=lf
+Dockerfile    text eol=lf
+*.dockerfile  text eol=lf
+
+# --------------------------------------------------
+# Binary files
+# --------------------------------------------------
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.tar   binary
+*.gz    binary
+
+
+# --------------------------------------------------
+# Lock files (no merge conflicts automatici)
+# --------------------------------------------------
+package-lock.json merge=ours
+pnpm-lock.yaml    merge=ours
+yarn.lock         merge=ours
+composer.lock     merge=ours
+
+# --------------------------------------------------
+# Generated / build artifacts
+# --------------------------------------------------
+dist/**  -diff
+build/** -diff
+coverage/** -diff

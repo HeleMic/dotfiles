@@ -1,0 +1,144 @@
+# -------------------------------------------------------
+# Operating Systems
+# -------------------------------------------------------
+
+# Mac OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# -------------------------------------------------------
+# IDEs and editors
+# -------------------------------------------------------
+
+# Visual Studio Code
+.vscode
+.vscode/*
+!.vscode/extensions.json
+
+# IntelliJ
+.idea
+.idea/*
+!.idea/runConfigurations
+
+# Sublime Text
+*.sublime-project
+.sublime-workspace
+
+# Vim
+*.sw?
+Session.vim
+
+# Emacs
+*~
+
+# Nano
+*.save
+*.nano.save
+
+# swap files
+*.swp
+*.swo
+
+# Common
+*~
+
+# -------------------------------------------------------
+# Frameworks & Languages
+# -------------------------------------------------------
+
+# Node
+node_modules
+dist
+build
+coverage
+npm-debug.log
+yarn-error.log
+.pnpm-store
+.npm
+.cache
+.next
+.nuxt
+
+# PHP
+vendor
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv
+venv/
+env/
+
+# Java
+*.class
+*.jar
+*.war
+target/
+.gradle/
+
+# Rust
+target/
+Cargo.lock
+
+# -------------------------------------------------------
+# Testing & Coverage
+# -------------------------------------------------------
+
+# PHP
+.phpunit-watcher-cache.php
+.phpunit.result.cache
+
+# Java
+.junit/
+
+# Common
+coverage/
+
+# -------------------------------------------------------
+# Other
+# -------------------------------------------------------
+
+# Environment files
+.env.*
+!.env.example
+!.env.sample
+
+# Logs & dumps
+*.log
+*.log.*
+*.stackdump
+*.pid
+
+# Temporary files
+tmp/
+temp/
+.cache-loader/
+
+# Notes
+.notes
+personal_notes.md
+
+# Backup
+*.bak
+*.backup
+*.old

@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# <type>(<scope>): <subject>  ← max 100 characters, imperative, no period
+# ---------------------------------------------------------------------------
+# Type examples:
+#   feat     → new feature
+#   fix      → bug fix
+#   refactor → refactoring without functional changes
+#   style    → formatting, spaces, commas (no logical changes)
+#   test     → add or modify tests
+#   docs     → documentation only
+#   chore    → build, dependencies, config (nothing touching src or test)
+#   perf     → performance improvement
+#   ci       → CI/CD pipeline changes
+#   revert   → revert a previous commit
+#   wip      → work in progress
+# ---------------------------------------------------------------------------
+
+# Message body (optional) — explain the WHY, not the WHAT
+# Leave a blank line between subject and body.
+# Wrap at 72 characters.
+
+# ---------------------------------------------------------------------------
+# Footer (optional)
+# ---------------------------------------------------------------------------
+# Breaking change:  BREAKING CHANGE: <description>
+# Issue reference:  Refs #456
+# ---------------------------------------------------------------------------

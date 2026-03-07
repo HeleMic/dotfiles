@@ -1,0 +1,56 @@
+[user]
+    name = Michele Lorenzoni
+    email = michelelorenzoni321@gmail.com
+
+[core]
+    pager = delta
+	  excludesfile = ~/.gitignore-global
+    autocrlf = false
+
+[init]
+    defaultBranch = main
+
+[commit]
+    template = ~/.gitmessage
+
+[branch]
+    sort = -committerdate
+
+[fetch]
+    prune = true
+
+[pull]
+    rebase = false
+
+[push]
+    autoSetupRemote = true
+
+[rebase]
+    autoStash = true
+
+[merge]
+    conflictstyle = zdiff3
+
+[interactive]
+	  diffFilter = delta --color-only
+
+[diff]
+    colorMoved = default
+
+[delta]
+	  navigate = true
+	  light = false
+	  side-by-side = true
+	  line-numbers = true
+
+[color]
+    ui = auto
+
+[include]
+    path = ~/.gitconfig.local
+
+[filter "lfs"]
+	  clean = git-lfs clean -- %f
+	  smudge = git-lfs smudge -- %f
+	  process = git-lfs filter-process
+	  required = true
