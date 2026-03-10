@@ -12,7 +12,7 @@ insert_final_newline = true
 [*.{py,java,kt,cs,cpp,c,h}]
 indent_size = 4
 
-[{Makefile,*.mk}]
+[{Makefile,*.mk,*.go}]
 indent_style = tab
 indent_size = 4
 
