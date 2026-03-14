@@ -140,8 +140,10 @@ echo "  ✔ core.excludesfile configured"
 print_subsection "VS CODE"
 VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
 if [[ -d "$VSCODE_USER_DIR" ]]; then
-    link_file "$DOTFILES_BASE_DIR/vscode/settings.json" "$VSCODE_USER_DIR/settings.json"
-    link_file "$DOTFILES_BASE_DIR/vscode/mcp.json"      "$VSCODE_USER_DIR/mcp.json"
+    cp "$DOTFILES_BASE_DIR/vscode/settings.json" "$VSCODE_USER_DIR/settings.json"
+    echo "  ✔ settings.json"
+    cp "$DOTFILES_BASE_DIR/vscode/mcp.json"      "$VSCODE_USER_DIR/mcp.json"
+    echo "  ✔ mcp.json"
     install_vscode_extensions "$DOTFILES_BASE_DIR/vscode/extensions.txt"
 else
     echo "  ⚠️  VS Code config directory not found — skipping"
