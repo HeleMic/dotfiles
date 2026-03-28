@@ -1,0 +1,50 @@
+[
+  {
+    "color": "default",
+    "type": "charizard",
+    "size": "medium",
+    "name": "Charizard",
+    "generation": "gen1",
+    "originalSpriteSize": 32
+  },
+  {
+    "color": "default",
+    "type": "dragonite",
+    "size": "medium",
+    "name": "Dragonite",
+    "generation": "gen1",
+    "originalSpriteSize": 32
+  },
+  {
+    "color": "default",
+    "type": "gengar",
+    "size": "medium",
+    "name": "Gengar",
+    "generation": "gen1",
+    "originalSpriteSize": 32
+  },
+  {
+    "color": "default",
+    "type": "lugia",
+    "size": "medium",
+    "name": "Lugia",
+    "generation": "gen2",
+    "originalSpriteSize": 64
+  },
+  {
+    "color": "default",
+    "type": "rayquaza",
+    "size": "medium",
+    "name": "Rayquaza",
+    "generation": "gen3",
+    "originalSpriteSize": 64
+  },
+  {
+    "color": "default",
+    "type": "infernape",
+    "size": "medium",
+    "name": "Infernape",
+    "generation": "gen4",
+    "originalSpriteSize": 32
+  }
+]

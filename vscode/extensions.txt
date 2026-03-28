@@ -12,9 +12,11 @@ esbenp.prettier-vscode
 fuzionix.devtool-plus
 github.copilot-chat
 gruntfuggly.todo-tree
+jakobhoeg.vscode-pokemon
 laravel.vscode-laravel
 mikestead.dotenv
 ms-ceintl.vscode-language-pack-it
+ms-python.black-formatter
 ms-python.debugpy
 ms-python.python
 ms-python.vscode-pylance
