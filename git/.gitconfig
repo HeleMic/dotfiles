@@ -4,7 +4,7 @@
 
 [core]
     pager = delta
-	  excludesfile = ~/.gitignore-global
+  	excludesfile = /Users/michele/.gitignore-global
     autocrlf = false
 
 [init]
