@@ -20,8 +20,9 @@ My personal configuration for macOS, ZSH, and VS Code. This repository centralis
 
 To install or update the dotfiles on a new machine:
 
-1.  Clone the repository: `git clone https://github.com/your-username/dotfiles.git ~/.dotfiles`
-2.  Run the install script:
+1. Clone the repository: `git clone https://github.com/your-username/dotfiles.git ~/.dotfiles`
+2. Run the install script:
+
     ```bash
     cd ~/.dotfiles
     ./bin/install.sh
@@ -47,6 +48,10 @@ Versioned files in this repo should stay generic. For local overrides you don't 
 - **iTerm2**: The Solarized Dark Corrected theme is in `iterm2/themes/`. Import it by double-clicking the file after installation.
 - **ZSH**: `agnoster` theme (customised in `oh-my-zsh-custom/themes/`).
 
+## 🤖 Copilot Customisation
+
+Agents, skills, and instructions for GitHub Copilot are managed in [`.github/`](.github/README.md). Assets can be activated or deactivated by moving them between `skills/` and `skills-inactive/` (same for instructions and agents). See the [`.github/README.md`](.github/README.md) for details.
+
 ## 🛠️ Project Tooling
 
-Run `./bin/setup-project.sh` inside a new repository to inject standard linting and formatting dependencies (Husky, Prettier, Lint-Staged, etc.).
+Run `./bin/setup-project.sh` inside a new repository to inject standard linting and formatting dependencies (Husky, Prettier, Lint-Staged, etc.) and copy all Copilot assets into the project's `.github/` directory (inactive by default).

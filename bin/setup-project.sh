@@ -111,6 +111,63 @@ fi
 copy_file "${DOTFILES_BASE_DIR}/coding/.editorconfig" .editorconfig
 
 # ────────────────────────────────────────────────────────────────
+# Copilot assets
+# ────────────────────────────────────────────────────────────────
+
+print_section "🤖  Copilot Assets"
+
+read -p "  → Copy Copilot agents, skills & instructions? (y/N): " setup_copilot
+if [[ "$setup_copilot" == "y" || "$setup_copilot" == "Y" ]]; then
+  readonly COPILOT_SRC="${DOTFILES_BASE_DIR}/.github"
+  readonly COPILOT_DEST="${project_base_path}/.github"
+
+  # Global instructions
+  if [[ -f "${COPILOT_SRC}/copilot-instructions.md" ]]; then
+    mkdir -p "${COPILOT_DEST}"
+    copy_file "${COPILOT_SRC}/copilot-instructions.md" "${COPILOT_DEST}/copilot-instructions.md"
+    echo "  ⚠️  Edit copilot-instructions.md to match the target project"
+  fi
+
+  # Copy skills (active + inactive) → all to skills-inactive/
+  skill_count=0
+  for skill_dir in "${COPILOT_SRC}"/skills/*/SKILL.md "${COPILOT_SRC}"/skills-inactive/*/SKILL.md; do
+    [[ -f "$skill_dir" ]] || continue
+    skill_name="$(basename "$(dirname "$skill_dir")")"
+    mkdir -p "${COPILOT_DEST}/skills-inactive/${skill_name}"
+    cp "$skill_dir" "${COPILOT_DEST}/skills-inactive/${skill_name}/SKILL.md"
+    skill_count=$((skill_count + 1))
+  done
+  echo "  ✔ ${skill_count} skills → .github/skills-inactive/"
+
+  # Copy instructions (active + inactive) → all to instructions-inactive/
+  instr_count=0
+  for instr_file in "${COPILOT_SRC}"/instructions/*.instructions.md "${COPILOT_SRC}"/instructions-inactive/*.instructions.md; do
+    [[ -f "$instr_file" ]] || continue
+    mkdir -p "${COPILOT_DEST}/instructions-inactive"
+    cp "$instr_file" "${COPILOT_DEST}/instructions-inactive/"
+    instr_count=$((instr_count + 1))
+  done
+  echo "  ✔ ${instr_count} instructions → .github/instructions-inactive/"
+
+  # Copy agents (active + inactive) → all to agents-inactive/
+  agent_count=0
+  for agent_file in "${COPILOT_SRC}"/agents/*.agent.md "${COPILOT_SRC}"/agents-inactive/*.agent.md; do
+    [[ -f "$agent_file" ]] || continue
+    mkdir -p "${COPILOT_DEST}/agents-inactive"
+    cp "$agent_file" "${COPILOT_DEST}/agents-inactive/"
+    agent_count=$((agent_count + 1))
+  done
+  echo "  ✔ ${agent_count} agents → .github/agents-inactive/"
+
+  # Create empty active directories
+  mkdir -p "${COPILOT_DEST}/skills" "${COPILOT_DEST}/instructions" "${COPILOT_DEST}/agents"
+
+  echo ""
+  echo "  💡 Move assets from *-inactive/ to the active directory to enable them."
+  echo "     Example: mv .github/skills-inactive/chrome-devtools .github/skills/"
+fi
+
+# ────────────────────────────────────────────────────────────────
 # Git remote
 # ────────────────────────────────────────────────────────────────
 
