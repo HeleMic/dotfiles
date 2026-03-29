@@ -42,7 +42,7 @@ puts "Hello World"
 </details>
 ```
 
-#### Notes:
+#### Notes
 
 * Markdown **inside `<details>`** is still parsed normally.
 * Syntax highlighting is preserved via `class="language-ruby"`.

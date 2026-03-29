@@ -34,11 +34,13 @@ zsh/              Shell config (.zshrc, .aliases, .functions, .zprofile, .zshenv
 
 - Aliases go in `zsh/.aliases`, functions in `zsh/.functions`.
 - Guard conditional aliases with `command -v`:
+
   ```bash
   if command -v eza &> /dev/null; then
       alias ls="eza --icons --group-directories-first"
   fi
   ```
+
 - Local overrides (not committed) live in `~/.dotfiles-custom/shell/`.
 
 ## Git conventions
@@ -54,7 +56,7 @@ zsh/              Shell config (.zshrc, .aliases, .functions, .zprofile, .zshenv
 - Line endings: LF always (`end_of_line = lf`).
 - Always insert a final newline.
 - Prettier for JS/TS/JSON/YAML/CSS formatting (config in `coding/.prettierrc`).
-- Markdownlint for Markdown (config in `coding/markdownlint.json`; line length rule MD013 is disabled).
+- Markdownlint for Markdown (config in `.markdownlint.json` and `coding/markdownlint.json`; line length rule MD013 is disabled). Uses `markdownlint-cli2`.
 
 ## Homebrew
 
@@ -69,7 +71,7 @@ zsh/              Shell config (.zshrc, .aliases, .functions, .zprofile, .zshenv
 
 ## File naming
 
-- Kebab-case for scripts and config files (`setup-project.sh`, `markdownlint.json`).
+- Kebab-case for scripts and config files (`setup-project.sh`, `.markdownlint.json`).
 - Dot-prefixed for files that get symlinked to `$HOME` (`.zshrc`, `.gitconfig`, `.aliases`).
 
 ## What NOT to do
