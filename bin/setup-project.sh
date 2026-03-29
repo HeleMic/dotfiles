@@ -108,6 +108,7 @@ if [[ -f "${project_base_path}/package.json" ]]; then
   copy_file "${DOTFILES_BASE_DIR}/coding/markdownlint.json"       .markdownlint.json
 fi
 
+mkdir -p .github
 copy_file "${DOTFILES_BASE_DIR}/.github/.markdownlint.json" .github/.markdownlint.json
 copy_file "${DOTFILES_BASE_DIR}/coding/.editorconfig" .editorconfig
 
