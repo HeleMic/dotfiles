@@ -24,7 +24,7 @@ readonly NODEJS_DEV_DEPS=(
     "@commitlint/cli"
     "@commitlint/config-conventional"
     "lint-staged"
-    "markdownlint-cli"
+    "markdownlint-cli2"
     "prettier"
     "prettier-plugin-organize-imports"
     "prettier-plugin-packagejson"

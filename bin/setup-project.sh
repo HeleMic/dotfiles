@@ -105,9 +105,10 @@ if [[ -f "${project_base_path}/package.json" ]]; then
   copy_file "${DOTFILES_BASE_DIR}/coding/.lintstagedrc.js"         .lintstagedrc.js
   copy_file "${DOTFILES_BASE_DIR}/coding/.prettierrc_with_plugins" .prettierrc
   copy_file "${DOTFILES_BASE_DIR}/coding/.prettierignore"          .prettierignore
-  copy_file "${DOTFILES_BASE_DIR}/coding/markdownlint.json"        .markdownlint.json
+  copy_file "${DOTFILES_BASE_DIR}/coding/markdownlint.json"       .markdownlint.json
 fi
 
+copy_file "${DOTFILES_BASE_DIR}/.github/.markdownlint.json" .github/.markdownlint.json
 copy_file "${DOTFILES_BASE_DIR}/coding/.editorconfig" .editorconfig
 
 # ────────────────────────────────────────────────────────────────
