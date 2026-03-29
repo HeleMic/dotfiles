@@ -24,9 +24,9 @@ To apply these standards to a new project, run the provided setup script:
 
 This script:
 
-1.  Checks for a `package.json`.
-2.  Installs the required `devDependencies` via `npm`.
-3.  Initialises Husky.
-4.  Copies configuration files (`.prettierrc`, `.commitlintrc.ts`, etc.) to the
+1. Checks for a `package.json`.
+2. Installs the required `devDependencies` via `npm`.
+3. Initialises Husky.
+4. Copies configuration files (`.prettierrc`, `.commitlintrc.ts`, etc.) to the
     project root.
-5.  (Optional) Adds PHP configuration if requested.
+5. (Optional) Adds PHP configuration if requested.
