@@ -19,7 +19,7 @@ may create:
 
 1. **`AGENTS.md`** — a universal agent context file compatible with 20+ AI
    coding tools (Cursor, Aider, Gemini CLI, etc.), following the open format at
-   https://agents.md/
+   <https://agents.md/>
 2. **GitHub Copilot instruction files** — `.github/copilot-instructions.md` for
    global Copilot behavior, or granular `.github/instructions/*.instructions.md`
    files scoped to specific file patterns

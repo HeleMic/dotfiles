@@ -49,7 +49,7 @@ Generates a conventional commit message that passes your `commitlint` rules, the
 
 ## Commit message format
 
-```
+```text
 type(scope): short description
 
 Optional body explaining the motivation behind this change.
@@ -70,26 +70,26 @@ Key rules:
 
 ## Examples
 
-```
+```text
 feat(auth): add JWT refresh token support
 ```
 
-```
+```text
 fix(ui,button): correct focus ring on disabled state
 ```
 
-```
+```text
 refactor(parser): simplify token extraction logic
 
 The previous regex was brittle on edge cases.
 The new approach relies on the AST directly.
 ```
 
-```
+```text
 chore: update dependencies
 ```
 
-```
+```text
 feat(api)!: rename /users endpoint to /accounts
 
 BREAKING CHANGE: all clients must update the base path from /users to /accounts

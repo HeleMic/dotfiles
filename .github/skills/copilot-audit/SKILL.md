@@ -18,7 +18,7 @@ Audit the `.github/` directory structure to detect misconfigurations, duplicates
 
 Scan the repository for Copilot customization assets:
 
-```
+```text
 .github/copilot-instructions.md          (global instructions)
 .github/instructions/*.instructions.md   (scoped instructions)
 .github/skills/*/SKILL.md                (skills)

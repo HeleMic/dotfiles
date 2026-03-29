@@ -26,7 +26,7 @@ Turn a specification or implementation plan into a well-structured GitHub Pull R
 
 Use a concise title that reflects the spec's purpose:
 
-```
+```text
 feat(auth): implement JWT refresh token support
 refactor(api): restructure endpoint routing
 ```
