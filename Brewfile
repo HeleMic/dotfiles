@@ -12,6 +12,7 @@ brew "lolcat"
 # --- Modern CLI replacements ---
 brew "eza"          # ls replacement
 brew "git-delta"    # git diff pager
+brew "ripgrep"      # grep replacement
 
 # --- Development ---
 brew "fnm"          # Node.js version manager
